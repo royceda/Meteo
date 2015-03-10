@@ -117,10 +117,10 @@ pa = JSON.parse(son);
 que = pa["query"];
 cha = que["results"]["channel"];
 puts cha["atmosphere"];
-puts "\n";
-puts cha["item"]["forecast"];
-puts "\n";
-puts cha["astronomy"];
+
+puts " \nPrevison:\n #{cha["item"]["forecast"]}";
+
+puts "\n infos soleil:\n #{cha["astronomy"]}";
 
 
 #with net
