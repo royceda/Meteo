@@ -115,8 +115,11 @@ son = '{
 #simple json
 pa = JSON.parse(son);
 que = pa["query"];
+pressure = que["results"]["channel"]["atmosphere"]["pressure"];
+
 cha = que["results"]["channel"];
-puts cha["atmosphere"];
+
+puts "pressure #{pressure} \n"
 
 puts " \nPrevison:\n #{cha["item"]["forecast"]}";
 
