@@ -12,8 +12,8 @@ module Weather
 
 
     def initialize(query)
-      @sunrise = query["results"]["channel"]["atmosphere"]
-      @sunset  = query["results"]["channel"]["atmosphere"]
+      @sunrise = query["results"]["channel"]["astronomy"]
+      @sunset  = query["results"]["channel"]["astronomy"]
 
 #      puts @sunrise;
     end
