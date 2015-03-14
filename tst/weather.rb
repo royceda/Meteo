@@ -117,7 +117,12 @@ pa = JSON.parse(son);
 que = pa["query"];
 pressure = que["results"]["channel"]["atmosphere"]["pressure"];
 
+wind = que["results"]["channel"]["wind"];
+
 cha = que["results"]["channel"];
+
+
+puts "wind #{wind} \n"
 
 puts "pressure #{pressure} \n"
 
@@ -138,3 +143,9 @@ query = JSON.parse response
 
 puts " \nprevision\n #{query["query"]["results"]["channel"]["item"]["forecast"]} \n"
 
+
+require 'map'
+
+Mapresponse = Map.new(JSON.parse(response)) #[:query][:results][:channel]
+
+puts "\nWind par Map:\n #{Mapresponse[:query][:results][:channel][:wind] } " 
