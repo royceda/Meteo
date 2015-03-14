@@ -117,6 +117,10 @@ pa = JSON.parse(son);
 que = pa["query"];
 pressure = que["results"]["channel"]["atmosphere"]["pressure"];
 
+cond = que["results"]["channel"]["item"]["condition"]
+
+puts "condition #{cond}\n\n"
+
 wind = que["results"]["channel"]["wind"];
 
 cha = que["results"]["channel"];
