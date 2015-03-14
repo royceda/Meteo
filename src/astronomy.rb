@@ -1,6 +1,5 @@
 require  'json'
 
-
 module Weather
   class Astronomy
     
