@@ -145,7 +145,7 @@ response = Net::HTTP.get_response(URI.parse url).body.to_s
 
 query = JSON.parse response
 
-puts " \nprevision\n #{query["query"]["results"]["channel"]["item"]["forecast"]} \n"
+puts " \nprevision\n #{query["query"]["results"]["channel"]["item"]["forecast"][1]} \n"
 
 
 require 'map'
