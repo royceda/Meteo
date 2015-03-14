@@ -1,5 +1,7 @@
 require  'json'
 
+#The query is in a Map
+
 module Weather
   class Astronomy
     
@@ -11,8 +13,8 @@ module Weather
 
 
     def initialize(query)
-      @sunrise = query["results"]["channel"]["astronomy"]
-      @sunset  = query["results"]["channel"]["astronomy"]
+      @sunrise = query[:results][:channel][:astronomy]
+      @sunset  = query[:results][:channel][:astronomy]
 
 #      puts @sunrise;
     end

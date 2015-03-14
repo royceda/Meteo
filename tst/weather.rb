@@ -148,4 +148,4 @@ require 'map'
 
 Mapresponse = Map.new(JSON.parse(response)) #[:query][:results][:channel]
 
-puts "\nWind par Map:\n #{Mapresponse[:query][:results][:channel][:wind] } " 
+puts "\nWind par Map:\n #{Mapresponse[:query][:results][:channel][:wind][:speed] } " 

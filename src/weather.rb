@@ -34,7 +34,7 @@ module Weather
         raise "Failed to get weather [url=#{url}]."
       end
       
-      response
+      response[:query]
 
     end
   end

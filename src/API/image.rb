@@ -12,17 +12,15 @@ module Weather
     def initialize
     end
 
-
     def initialize(query)
-      @title  = query["results"]["channel"]["image"]["title"];
-      @width  = query["results"]["channel"]["image"]["width"]; 
-      @height = query["results"]["channel"]["image"]["height"];
-      @link   = query["results"]["channel"]["image"]["link"];
-      @url    = query["results"]["channel"]["image"]["url"];
+      @title  = query[:results][:channel][:image][:title];
+      @width  = query[:results][:channel][:image][:width]; 
+      @height = query[:results][:channel][:image][:height];
+      @link   = query[:results][:channel][:image][:link];
+      @url    = query[:results][:channel][:image][:url];
 
-#      puts @sunrise;
+      #      puts @sunrise;
     end
-
   end
 end
 

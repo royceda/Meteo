@@ -10,15 +10,12 @@ module Weather
     def initialize
     end
 
-
     def initialize(query)
-      @chill     = query["results"]["channel"]["wind"]["chill"];
-      @direction = query["results"]["channel"]["wind"]["direction"]; 
-      @speed     = query["results"]["channel"]["wind"]["speed"];
+      @chill     = query[:results][:channel][:wind][:chill];
+      @direction = query[:results][:channel][:wind][:direction]; 
+      @speed     = query[:results][:channel][:wind][:speed];
 
-#      puts @sunrise;
     end
-
   end
 end
 

@@ -14,14 +14,12 @@ module Weather
 
 
     def initialize(query)
-      @humidity   = query["results"]["channel"]["atmosphere"].humidity
-      @pressure   = query["results"]["channel"]["atmosphere"].pressure
-      @rising     = query["results"]["channel"]["atmosphere"].rising
-      @visibility = query["results"]["channel"]["atmosphere"].visibility
+      @humidity   = query[:results][:channel][:atmosphere][:humidity]
+      @pressure   = query[:results][:channel][:atmosphere][:pressure]
+      @rising     = query[:results][:channel][:atmosphere][:rising]
+      @visibility = query[:results][:channel][:atmosphere][:visibility]
 
-#      puts @sunrise;
     end
-
   end
 end
 
