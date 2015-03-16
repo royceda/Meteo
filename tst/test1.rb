@@ -10,7 +10,7 @@ query = Weather.lookup(580778, Weather::Units::CELSIUS)
 
 a  = Weather::Atmosphere.new query;
 l  = Weather::Location.new query;
-f = Weather::Forecast.new query;
+
 as = Weather::Astronomy.new query
 c  = Weather::Condition.new query
 
@@ -22,3 +22,9 @@ puts "Atmosphere:\n humidity: #{a.humidity} % \n pressure: #{a.pressure} \n risi
 puts "Astronomy:\n Sunrise: #{as.sunrise} \n Sunset: #{as.sunset}\n"
 
 puts "Condition:\n code: #{c.code} \n date: #{c.date} \n temp: #{c.temp} °C \n text: #{c.text}\n"
+
+for i in 0..4
+
+  f = Weather::Forecast.new query, i;
+  puts "Forecast:\n code: #{f.code} \n date: #{f.date} \n day: #{f.day} \n high: #{f.high} \n low: #{f.low} \n text: #{f.text} \n "
+end

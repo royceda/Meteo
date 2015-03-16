@@ -13,14 +13,14 @@ module Weather
     def initialize
     end
 
-    def initialize(query)
+    def initialize(query, i)
       
-      @code = query[:results][:channel][:item][:forecast][1][:code];
-      @date = query[:results][:channel][:item][:forecast][1][:date]; 
-      @day  = query[:results][:channel][:item][:forecast][1][:day];
-      @high = query[:results][:channel][:item][:forecast][1][:high];
-      @low  = query[:results][:channel][:item][:forecast][1][:low];
-      @text = query[:results][:channel][:item][:forecast][1][:text];
+      @code = query[:results][:channel][:item][:forecast][i][:code];
+      @date = query[:results][:channel][:item][:forecast][i][:date]; 
+      @day  = query[:results][:channel][:item][:forecast][i][:day];
+      @high = query[:results][:channel][:item][:forecast][i][:high];
+      @low  = query[:results][:channel][:item][:forecast][i][:low];
+      @text = query[:results][:channel][:item][:forecast][i][:text];
 
       #      puts @sunrise;
     end
