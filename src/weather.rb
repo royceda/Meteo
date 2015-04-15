@@ -29,11 +29,12 @@ module Weather
         raise "Failed to get weather [url=#{url}, e=#{e}]."
       end
 
+
       response = Map.new(JSON.parse(response))[:query]#[:results][:channel]
       
-#      if response.nil? or response.title.match(/error/i)
- #       raise "Failed to get weather [url=#{url}]."
-  #   end
+   if response.nil? 
+     raise "Failed to get weather [url=#{url}]."
+   end
       
       response
     end
