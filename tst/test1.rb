@@ -6,7 +6,12 @@ load '../src/API/astronomy.rb'
 load '../src/API/forecast.rb'
 load '../src/API/condition.rb'
 
+
+Weather.getWoeid( "Bordeaux", "France")
+
+
 query = Weather.lookup(580778, Weather::Units::CELSIUS)
+
 
 a  = Weather::Atmosphere.new query;
 l  = Weather::Location.new query;
