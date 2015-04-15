@@ -7,10 +7,12 @@ load '../src/API/forecast.rb'
 load '../src/API/condition.rb'
 
 
-query = Weather.lookup(Weather.getWoeid( "Bordeaux", "France"), Weather::Units::CELSIUS)
+woeid = Weather.getWoeid( "Bordeaux", "France")
 
+a = woeid.instance_of? Integer
+puts a
 
-#query = Weather.lookup(580778, Weather::Units::CELSIUS)
+query = Weather.lookup(woeid, Weather::Units::CELSIUS)
 
 
 a  = Weather::Atmosphere.new query;
